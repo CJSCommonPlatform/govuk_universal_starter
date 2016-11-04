@@ -1,0 +1,29 @@
+@import '~govuk_template_mustache/assets/stylesheets/fonts';
+@import '~govuk_template_mustache/assets/stylesheets/govuk-template';
+
+
+$fa-font-path: '/assets/fonts';
+$govuk-frontend-toolkit-image-path: '/assets/img/';
+$govuk-template-image-path: '/assets/img';
+$pdk-image-path: '/assets/img/';
+$nta-font-path: '/assets/fonts';
+
+@import "~govuk-elements-sass/public/sass/_govuk-elements";
+
+// If image-url is not defined (if we are not in a Rails environment)
+// Set a path to /assets/img/
+@if not(function-exists(image-url)) {
+  $path: "/assets/img/";
+}
+
+@import "~@govuk/platform-template/platform-template";
+
+
+
+
+// ==========================================================================
+// Plead online: Transport for London (imports)
+// ==========================================================================
+
+// Import online plea elements
+@import "../assets/online-plea/manifest";

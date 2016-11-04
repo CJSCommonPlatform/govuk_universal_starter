@@ -1,0 +1,18 @@
+<div class="error-summary"
+     id="error-summary"
+     role="group"
+     tabindex="-1"
+     aria-labelledby="error-summary-heading"
+     *ngIf="innerErrors.length">
+
+    <h2 class="heading-medium error-summary-heading" id="error-summary-heading">Fix the following</h2>
+    
+    <ul class="error-summary-list">
+        <li *ngFor="let innerError of innerErrors">
+            <a *ngIf="pageScroll" href="{{innerError.shortId}}">{{innerError.title}}</a>
+            <a *ngIf="!pageScroll" href="{{innerError.fullId}}">{{innerError.title}}</a>
+        </li>
+    </ul>
+</div>
+
+

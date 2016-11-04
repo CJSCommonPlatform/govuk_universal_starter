@@ -1,0 +1,63 @@
+// ==========================================================================
+// Plead online: Transport for London (forms)
+// ==========================================================================
+
+
+$module: "form";
+
+
+.#{$module} {
+
+  &-control-textarea {
+    resize: vertical;   
+    width: 100%;
+  }
+  
+  &-currency {
+    display: block;
+    position: relative;
+    
+    .#{$module}-control {
+      padding-left: em(34);
+    }
+    
+    &:before {
+      @include core-19;
+      color: $grey-1;
+      content: "\00a3";
+      display: inline-block;
+      font-weight: bold;
+      position: absolute;
+      text-align: center;
+      vertical-align: middle;
+      left: em(12); top: 50%;
+      
+      /* IE9 Support and above */
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    
+  }
+
+
+}
+
+
+// Added legend style to allow error class on fieldset (Inform GDS of its use)
+
+fieldset legend {
+  float: left;
+  width: 100%;
+}
+
+
+// Due to error on fieldset the legend was being hidden behind the block element (quick fix to override problem)
+
+@include media (mobile) {
+
+  .inline .block-label { 
+    clear: left;
+  }
+  
+}

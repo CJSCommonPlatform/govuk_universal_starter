@@ -1,0 +1,82 @@
+{
+  "rules": {
+    "array-bracket-spacing": 2,
+    "comma-dangle": 2,
+    "comma-spacing": 2,
+    "comma-style": [ 2, "last" ],
+    "curly": 2,
+    "dot-notation": 2,
+    "indent": [2, 2], // 2 space indentation
+    "linebreak-style": [ 0, "unix" ], // no check for EOL
+    "max-depth": [ 1, 4 ],
+    "max-len": [ 1, 150, 2 ], // Max indentation depth
+    "max-params": 0,
+    "new-cap": 2,
+    "no-cond-assign": [ 2, "always" ],
+    "no-else-return": 1,
+    "no-empty": 2,
+    "no-eval": 1,
+    "no-extend-native": 1,
+    "no-fallthrough": 1,
+    "no-lone-blocks": 1,
+    "no-mixed-spaces-and-tabs": [ 2, "smart-tabs" ],
+    "no-multiple-empty-lines": [
+      2,
+      { "max": 2 }
+    ],
+    "no-multi-spaces": 1,
+    "no-spaced-func": 2,
+    "no-trailing-spaces": 2,
+    "no-unused-expressions": 0,
+    "quote-props": [ 2, "consistent" ],
+    "quotes": [ 0, "single" ],
+    "radix": 0,
+    "semi": [ 2, "always" ],
+    "semi-spacing": [
+      2,
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "space-before-function-paren": 0,
+    "space-in-brackets": 0,
+    "space-in-parens": 2,
+    "space-unary-ops": [
+      1,
+      {
+        "words": true,
+        "nonwords": false
+      }
+    ],
+    "strict": [ 0 ],
+    "wrap-iife": [ 2, "any" ],
+    "yoda": 2
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "$": false, // We shouldn't be using jquery
+    "$$": false,
+    "_": true,
+    "afterEach": true,
+    "angular": true,
+    "beforeEach": true,
+    "browser": true,
+    "by": true,
+    "describe": true,
+    "element": true,
+    "expect": true,
+    "fdescribe": true,
+    "fit": true,
+    "inject": true,
+    "it": true,
+    "jasmine": true,
+    "module": true,
+    "request": true,
+    "sinon": true,
+    "xdescribe": true
+  }
+}

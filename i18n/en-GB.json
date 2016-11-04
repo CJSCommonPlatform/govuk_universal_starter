@@ -1,0 +1,4 @@
+{
+    "welcomeMessage" : "Welcome to the Govuk Universal Starter",
+    "submessage": "This project intends to help you to set up a working Angular Universal project to use Angular2 and having also progressive enhancement."
+}

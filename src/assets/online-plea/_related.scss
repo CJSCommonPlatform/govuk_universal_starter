@@ -1,0 +1,32 @@
+// ==========================================================================
+// Plead online: Transport for London (related)
+// ==========================================================================
+
+
+$module: "related";
+
+
+.#{$module} {
+  margin-top: em(30);
+  padding-top: em(5);
+  
+  &-section {
+    margin-bottom: em(20);
+  }
+    
+  &-title {
+    @extend .heading-medium;
+    margin-top: em(7);
+    margin-bottom: em(12);
+  }
+  
+  &-links {
+    overflow: hidden;
+    
+    li {
+      margin-bottom: em(12, 16);
+    }
+    
+  }
+
+}

@@ -1,0 +1,74 @@
+// ==========================================================================
+// Plead online: Transport for London (synopsis)
+// ==========================================================================
+
+
+$module: "synopsis";
+
+
+.#{$module} {
+
+  &-item {
+    border-top: 1px solid $border-colour;
+    padding: em(30) 0;
+
+    &:first-child {
+      border: 0 none;
+      padding-top: 0;
+
+      @include media (tablet) {
+        padding-top: em(30);
+      }
+
+    }
+
+  }
+
+  &-subitem {
+    margin-top: em(40);
+  }
+
+  &-heading {
+    position: relative;
+  }
+
+  &-action {
+    position: absolute;
+    right: 0; top: 0;
+
+    &:focus {
+      outline: none; // GDS focus has an issues in Firefox!
+    }
+
+  }
+
+  dl {
+    margin-top: em(10);
+  }
+
+  dt, dd {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-top: em(10);
+    vertical-align: top;
+    width: 50%;
+  }
+
+  dt {
+    padding-right: em(40);
+  }
+
+  @include media (tablet) {
+
+    dt {
+      width: 40%;
+    }
+
+    dd {
+      width: 60%;
+    }
+
+  }
+
+}
+
