@@ -12,15 +12,34 @@ import { ErrorMessageComponent } from './app/components/forms-and-errors/error-m
 import { ErrorSummaryComponent } from './app/components/forms-and-errors/error-summary/error-summary.component';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { ApiService } from './app/components/api-service';
+import {provideStore} from '@ngrx/store'
+import {todos} from './app/state/todo/todo.reducers';
+
+import { TodoListComponent } from './app/example-redux/todo-list.component';
+import { NewTodoComponent } from './app/example-redux/new-todo.component';
+import { ExampleReduxComponent }  from './app/example-redux/example-redux.component';
 
 
 import {applicationParams} from './ng-app.config';
 
 @NgModule({
   bootstrap: [ App ],
-  declarations: [ App, MainComponent, LazyValidationDirective, ErrorMessageComponent, ErrorSummaryComponent ],
+  declarations: [ 
+      App, 
+      MainComponent, 
+      LazyValidationDirective, 
+      ErrorMessageComponent, 
+      ErrorSummaryComponent, 
+      ExampleReduxComponent,
+      NewTodoComponent,
+      TodoListComponent ],
   providers: [
-    ApiService
+    ApiService,
+    provideStore(
+      {
+        todos
+      }
+    )    
   ],
   imports: [
     FormsModule,

@@ -23,9 +23,9 @@
     "debug": "nodemon --debug-brk dist/server/server.js",
     "test": "karma start --no-auto-watch --single-run",
     "test:watch": "karma start --auto-watch --no-single-run",
-    "pree2e": "./node_modules/.bin/webdriver-manager update", 
-    "e2e": "./node_modules/.bin/protractor ./config/protractor.js.conf.js", 
-    "pree2e-nojs": "./node_modules/.bin/webdriver-manager update", 
+    "pree2e": "./node_modules/.bin/webdriver-manager update",
+    "e2e": "./node_modules/.bin/protractor ./config/protractor.js.conf.js",
+    "pree2e-nojs": "./node_modules/.bin/webdriver-manager update",
     "e2e-nojs": "./node_modules/.bin/protractor ./config/protractor.nojs.conf.js"
   },
   "contributors": [
@@ -43,6 +43,8 @@
     "@angular/platform-server": "2.0.0",
     "@angular/router": "3.0.0",
     "@govuk/platform-template": "0.0.133",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/store": "^2.2.1",
     "angular2-express-engine": "~2.0.11",
     "angular2-platform-node": "~2.0.11",
     "angular2-universal": "~2.0.11",

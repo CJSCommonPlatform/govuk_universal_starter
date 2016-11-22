@@ -11,7 +11,11 @@ import { LazyValidationDirective } from './app/components/forms-and-errors/lazy-
 import { ErrorMessageComponent } from './app/components/forms-and-errors/error-message/error-message.component';
 import { ErrorSummaryComponent } from './app/components/forms-and-errors/error-summary/error-summary.component';
 import { ApiService } from './app/components/api-service';
-
+import {provideStore} from '@ngrx/store'
+import {todos} from './app/state/todo/todo.reducers';
+import { TodoListComponent } from './app/example-redux/todo-list.component';
+import { NewTodoComponent } from './app/example-redux/new-todo.component';
+import { ExampleReduxComponent }  from './app/example-redux/example-redux.component';
 
 export function ngApp(req, res) {
   let post = req.body || null;
@@ -23,11 +27,24 @@ export function ngApp(req, res) {
 
   @NgModule({
     bootstrap: [ App ],
-    declarations: [ App, MainComponent, LazyValidationDirective, ErrorMessageComponent, ErrorSummaryComponent ],
+    declarations: [ 
+      App, 
+      MainComponent, 
+      LazyValidationDirective, 
+      ErrorMessageComponent, 
+      ErrorSummaryComponent, 
+      ExampleReduxComponent,
+      NewTodoComponent,
+      TodoListComponent ],
     providers: [
       ApiService,
       {provide: applicationParams, useValue: post},
-      {provide: applicationOriginalUrl, useValue: req.originalUrl}
+      {provide: applicationOriginalUrl, useValue: req.originalUrl},
+      provideStore(
+        {
+          todos
+        }
+      )
     ],
     imports: [
       FormsModule,

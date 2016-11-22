@@ -12,7 +12,5 @@ export class MainComponent{
 
           let browserLang = translate.getBrowserLang();
           translate.use('en-GB');
-          // translate.use(browserLang.match(/en-GB|cy/) ? browserLang : 'en-GB');
-          // translate.use('en-GB');
   }
 }
