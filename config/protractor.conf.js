@@ -5,6 +5,18 @@
 require('ts-node/register');
 var helpers = require('./helpers');
 
+var withJS = {
+  'browserName': 'chrome',
+  'chromeOptions': {
+    'args': ['show-fps-counter=true']
+  }
+};
+
+var withoutJS = {
+  'browserName': 'phantomjs',
+  'javascriptEnabled': true
+};
+
 exports.config = {
   baseUrl: 'http://localhost:3000/',
 
@@ -27,16 +39,10 @@ exports.config = {
   },
   directConnect: true,
 
-  capabilities: {
-    'browserName': 'chrome',
-    'chromeOptions': {
-      'args': ['show-fps-counter=true']
-    }
-  },
-
   onPrepare: function() {
+    this.config.capabilities = (browser.params && browser.params.js) ? withJS : withoutJS;
     browser.ignoreSynchronization = true;
-  },
+  }.bind(this),
 
   /**
    * Angular 2 configuration

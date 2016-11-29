@@ -24,9 +24,9 @@
     "test": "karma start --no-auto-watch --single-run",
     "test:watch": "karma start --auto-watch --no-single-run",
     "pree2e": "./node_modules/.bin/webdriver-manager update",
-    "e2e": "./node_modules/.bin/protractor ./config/protractor.js.conf.js",
+    "e2e": "./node_modules/.bin/protractor ./config/protractor.conf.js --params.js=true",
     "pree2e-nojs": "./node_modules/.bin/webdriver-manager update",
-    "e2e-nojs": "./node_modules/.bin/protractor ./config/protractor.nojs.conf.js"
+    "e2e-nojs": "./node_modules/.bin/protractor ./config/protractor.conf.js"
   },
   "contributors": [
     "Fabio Tisci <fabiotisci@gmail.com>",
