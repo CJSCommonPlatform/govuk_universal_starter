@@ -37,12 +37,16 @@ exports.config = {
     includeStackTrace: false,
     defaultTimeoutInterval: 400000
   },
-  directConnect: true,
 
   onPrepare: function() {
-    this.config.capabilities = (browser.params && browser.params.js) ? withJS : withoutJS;
+    this.config.capabilities = browser.params.nojs ? withoutJS : withJS;
+    this.config.directConnect = !browser.params.nojs;
     browser.ignoreSynchronization = true;
   }.bind(this),
+
+  onComplete: function() {
+    console.log('***** Protractor is done');
+  },
 
   /**
    * Angular 2 configuration

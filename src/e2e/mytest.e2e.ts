@@ -1,18 +1,19 @@
+import { MyPage } from './util/mypage.object';
+
 describe('angularjs homepage todo list', function() { 
   it('should navigate to your case page', function() {
-    browser.get('http://localhost:3000/');
+    let myPage = new MyPage()
+    myPage.navigateTo();
 
-    element(by.className('button-start')).click();
-
-    expect(browser.getCurrentUrl()).toBe('http://localhost:3000/your-case');
+    expect(browser.getCurrentUrl()).toBe('http://localhost:3000/');
   });
   
-  it('should submit a case number and postcode', function() {
+  // it('should submit a case number and postcode', function() {
     
-    element(by.id('case-unique-reference-number')).sendKeys('abcde');
-    element(by.id('case-postcode')).sendKeys('CR01XG');
+  //   element(by.id('case-unique-reference-number')).sendKeys('abcde');
+  //   element(by.id('case-postcode')).sendKeys('CR01XG');
 
-    element(by.id('test')).click();
-    expect(element(by.id('success')).isPresent()).toBe(true);
-  });
+  //   element(by.id('test')).click();
+  //   expect(element(by.id('success')).isPresent()).toBe(true);
+  // });
 });

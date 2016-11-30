@@ -10,6 +10,7 @@ reports/
 src/app/config/app.override.config.json
 .history/
 .tmp/
+pages/
 
 #typscript
 /__server_build__
