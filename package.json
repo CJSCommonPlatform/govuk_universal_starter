@@ -27,7 +27,7 @@
     "e2e": "./node_modules/.bin/protractor ./config/protractor.conf.js",
     "pree2e-nojs": "./node_modules/.bin/webdriver-manager update",
     "e2e-nojs": "./node_modules/.bin/protractor ./config/protractor.conf.js --params.nojs=true",
-    "poste2e-nojs": "node ./pally.js"
+    "poste2e-nojs": "gulp"
   },
   "contributors": [
     "Fabio Tisci <fabiotisci@gmail.com>",
@@ -90,6 +90,9 @@
     "expose-loader": "^0.7.1",
     "file-loader": "^0.9.0",
     "gh-pages": "^0.11.0",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-util": "^3.0.7",
     "html-webpack-plugin": "^2.22.0",
     "imports-loader": "^0.6.5",
     "istanbul-instrumenter-loader": "^1.0.0",

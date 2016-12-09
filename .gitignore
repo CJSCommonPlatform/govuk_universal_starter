@@ -11,6 +11,7 @@ src/app/config/app.override.config.json
 .history/
 .tmp/
 pages/
+report/
 
 #typscript
 /__server_build__
