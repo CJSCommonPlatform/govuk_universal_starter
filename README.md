@@ -1,16 +1,16 @@
-**Prerequisites
+# Prerequisites
 npm install -g pa11y protractor
 
-*Start the projecy
+## Start the projecy
 
 npm start
 
-*Run End to End tests 
+###Run End to End tests 
 (the project needs to be running on another terminal)
 
-**using javascript 
+####using javascript 
 npm run e2e
 
-**without javascript 
+####without javascript 
 (this also creates the pa11y report inside report/) 
 npm run e2e-nojs
