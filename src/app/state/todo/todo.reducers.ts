@@ -11,7 +11,6 @@ export interface TodoState{
 }    
 
 export const todos = (state = [], {type, payload}) => {
-  console.log('ACTION:', type, payload);
   switch(type){
     case ADD_TODO:
       return state.concat([Object.assign({}, payload, {id: state.length + 1})]);

@@ -31,6 +31,7 @@ export class ExampleReduxComponent {
 
   constructor(private store: Store<AppState>) {
     this.todos$ = store.select('todos').map((data) => data);
+    console.log('this.todos$', this.todos$);
   }
   addTodo(newTodo){
     this.store.dispatch({

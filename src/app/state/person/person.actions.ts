@@ -1,0 +1,2 @@
+export const ADD_PERSONAL_DETAILS = 'ADD_PERSONAL_DETAILS';
+export const ADD_EMAIL = 'ADD_EMAIL';

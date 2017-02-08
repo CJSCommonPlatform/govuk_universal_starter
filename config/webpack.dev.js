@@ -64,14 +64,6 @@ var clientConfig = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      // {
-      //   context: './src',
-      //   from: 'govuk/images/**'
-      // },
-      // {
-      //   context: './src',
-      //   from: 'govuk/stylesheets/**'
-      // }
       {
         context: './node_modules/@govuk/platform-template/lib',
         from: 'govuk_template/**/*.png',
@@ -107,7 +99,11 @@ var clientConfig = {
         from: 'external-links/*',
         to: 'external-links',
         flatten: true
-      }            
+      }, 
+      {
+        from: './node_modules/govuk_template_mustache/assets/stylesheets/govuk-template-print.css',
+        to: 'assets/stylesheets',
+      }
     ])
   ]
 };

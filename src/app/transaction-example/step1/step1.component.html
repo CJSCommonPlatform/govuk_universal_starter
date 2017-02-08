@@ -1,0 +1,45 @@
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">{{ 'step1' | translate }}</h1>
+    <error-summary
+      [errors]="(innerParams && innerParams.submit) ? step1Form.controls : validationErrors" 
+      [fields]="[{label: 'firstName', title: 'Firstname'}, {label: 'lastName', title: 'Lastname'}]"></error-summary>
+
+    <form class="form" action="step1?submit=true" method="post" [lazyValidation]="step1Form" (errors)="formErrors($event)" (lazySubmit)="step1Submit()" 
+    [formGroup]="step1Form" autocomplete="off" novalidate>
+
+      <div class="form-group" id="error-firstName" [ngClass]="{ 'error': validationErrors?.firstName || (innerParams?.submit && step1Form?.controls['firstName']?.invalid) }">
+        <label for="firstName">
+          <span class="form-label-bold">{{ 'firstName' | translate}}</span>
+          <error-message class="error-message" 
+                        [EMerrors]="(innerParams && innerParams.submit) ? step1Form.controls : validationErrors" 
+                        [inputHTMLType]="'input'" 
+                        [inputHTMLName]="'firstName'"></error-message>
+        </label>
+
+        <input class="form-control" type="text" id="firstName" name="firstName"  aria-required="true"
+               [formControl]="step1Form.controls['firstName']">
+      </div>
+
+      <div class="form-group" id="error-lastName" [ngClass]="{ 'error': validationErrors?.lastName || (innerParams?.submit && step1Form?.controls['lastName']?.invalid) }">
+        <label for="lastName">
+          <span class="form-label-bold">{{ 'lastName' | translate}}</span>
+          <error-message class="error-message" 
+                        [EMerrors]="(innerParams && innerParams.submit) ? step1Form.controls : validationErrors " 
+                        [inputHTMLType]="'input'" 
+                        [inputHTMLName]="'lastName'"></error-message>
+        </label>
+        <input class="form-control" type="text" id="lastName" name="lastName" aria-required="true"
+              [formControl]="step1Form.controls['lastName']">
+      </div>
+
+      <div class="form-group">
+        <button class="button" type="submit" id="test"
+                data-focus-event="click"
+                data-focus-target="error-summary"
+                data-focus>{{ 'continue' | translate}}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

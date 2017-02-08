@@ -1,0 +1,25 @@
+<div class="grid-row" *ngIf="!success">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">{{ 'verifyData' | translate }}</h1>
+    <h2 class="heading-large">{{ 'review' | translate }}</h2>
+  </div>
+</div>
+<div class="grid-row" *ngIf="!success">
+  <div class="column-one-third">
+    <p class="bold-small">{{ 'firstName' | translate}}:</p>
+    <p class="bold-small">{{ 'lastName' | translate}}:</p>
+    <p class="bold-small">{{ 'email' | translate}}:</p>
+  </div>
+
+  <div class="column-two-thirds">
+    <p>{{ (person$ | async)?.firstName }}</p>
+    <p>{{ (person$ | async)?.lastName }}</p>
+    <p>{{ (person$ | async)?.email }}</p>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <button (click)="submit$.next()" *ngIf="!success" class="button  button-start">{{ 'sendData' | translate }}</button>
+    <h1 class="heading-large" *ngIf="success">{{ 'dataSent' | translate }}</h1>
+  </div>
+</div>

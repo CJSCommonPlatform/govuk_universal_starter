@@ -1,4 +1,16 @@
 {
     "welcomeMessage" : "Welcome to the Govuk Universal Starter",
-    "submessage": "This project intends to help you to set up a working Angular Universal project to use Angular2 and having also progressive enhancement."
+    "submessage": "This project intends to help you to set up a working Angular Universal project to use Angular2 and having also progressive enhancement.",
+    "please": "Please, click the following button to see a feature example page using Angular Universal and ng-rx",
+    "start": "Start",
+    "firstName": "Firstname",
+    "lastName": "Lastname",
+    "email": "Email",
+    "verifyData": "Verify your Data",
+    "continue": "Continue",
+    "review": "Review the values provided and click send once you have verified the data",
+    "step1": "Step 1",
+    "step2": "Step 2",
+    "sendData": "Send data",
+    "dataSent": "Your data has been sent. Thanks"
 }
